@@ -34,10 +34,9 @@ const boxMoveDown = () =>{
 }
 
 const boxMoveUp = () => {
-    if(isClickable && stopped){
+    if(isClickable){
         stopped = false
         var elem = document.getElementById("animationBox");
-        // var pos = 350;
         pos = this.pos;
         var id = setInterval(frameUpper, 10);
         
@@ -49,6 +48,7 @@ const boxMoveUp = () => {
             } else if(stopped){
                 clearInterval(id);
                 isClickable = true;
+                console.log(isClickable)
             } else{
                 isClickable = false;
                 pos--;
